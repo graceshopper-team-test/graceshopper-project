@@ -1,15 +1,15 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
 
-const Orders = db.define("products", {
+const Orders = db.define("order", {
   userId: {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
-  completed:{
-    type:Sequelize.BOOLEAN,
+  completed: {
+    type: Sequelize.BOOLEAN,
     allowNull: false,
-  }
+  },
 });
 
 module.exports = Orders;
