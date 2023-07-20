@@ -46,7 +46,6 @@ export const deleteSingleProduct = createAsyncThunk(
   "singleProduct/deleteSingleProduct",
 
   async (productId) => {
-    // console.log(productId);
     try {
       const { data } = await axios.delete(`/api/products/${productId}`);
       return data;
@@ -60,10 +59,8 @@ export const updateSingleProduct = createAsyncThunk(
   "singleProduct/updateSingleProduct",
 
   async ({ id, updateProduct }) => {
-    // console.log(productId);
     try {
       const { data } = await axios.put(`/api/products/${id}`, updateProduct);
-      // console.log(data);
       return data;
     } catch (err) {
       return err.message;
